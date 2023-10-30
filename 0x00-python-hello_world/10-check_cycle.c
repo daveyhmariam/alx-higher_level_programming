@@ -10,11 +10,13 @@
 int check_cycle(listint_t *list)
 {
     listint_t *front, *back;
+    if (!list)
+        return (0);
     back = list;
     front = list;
 
 
-    while ((front->next != NULL) && (front != NULL) && back)
+    while (back && front && front->next)
             {
 				back = back->next;
 				front = front->next->next;
