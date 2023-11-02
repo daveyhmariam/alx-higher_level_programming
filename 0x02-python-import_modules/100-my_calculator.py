@@ -13,6 +13,6 @@ if __name__ == "__main__":
     if argv[2] in op:
         a = int(argv[1])
         b = int(argv[3])
-        print("{} {} {} = {op[argv[2]](a, b)}".format(a, argv[2], b))
+        print("{} {} {} = {}".format(a, argv[2], b, op[argv[2]](a, b)))
     else:
         print(f"Unknown operator. Available operators: +, -, * and /")
