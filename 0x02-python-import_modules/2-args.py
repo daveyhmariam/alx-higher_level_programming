@@ -4,15 +4,15 @@ if __name__ == "__main__":
     prints command line args
 
     """
-    from sys import argv
-    if len(argv) == 1:
-        print("{} arguments:".format(len(argv) - 1))
-    elif len(argv) == 2:
-        print("{} argument:".format(len(argv) - 1))
+    import sys
+    if len(sys.argv) == 1:
+        print("{} arguments:".format(len(sys.argv) - 1))
+    elif len(sys.argv) == 2:
+        print("{} argument:".format(len(sys.argv) - 1))
     else:
-        print("{} arguments:".format(len(argv) - 1))
+        print("{} arguments:".format(len(sys.argv) - 1))
     i = 1
-    for str in argv:
-        if str != argv[0]:
+    for str in sys.argv:
+        if str != sys.argv[0]:
             print("{}: {}".format(i, str))
             i += 1
