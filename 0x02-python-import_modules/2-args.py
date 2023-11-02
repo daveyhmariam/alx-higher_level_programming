@@ -6,11 +6,11 @@ if __name__ == "__main__":
     """
     from sys import argv
     if len(argv) == 1:
-        print("{len(argv) - 1} argumnt:".format(len(argv) - 1))
+        print("{} argumnt:".format(len(argv) - 1))
     else:
-        print("{len(argv) - 1} arguments:".format(len(argv) -1))
+        print("{} arguments:".format(len(argv) -1))
     i = 1
     for str in argv:
         if str != argv[0]:
-            print("{i}: {str}".format(i, str))
+            print("{}: {}".format(i, str))
             i += 1
