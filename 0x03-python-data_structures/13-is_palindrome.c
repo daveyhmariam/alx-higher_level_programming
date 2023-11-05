@@ -5,26 +5,17 @@ int is_palindrome(listint_t **head)
 	listint_t *newhead, *reversed, *tmp;
 	if (*head == NULL || head == NULL)
 		return (1);
-
+	reversed = *head;
 	newhead = *head;
-	reversed = (listint_t *) malloc(sizeof(listint_t));
-	if (reversed == NULL)
-		return (0);
-	reversed->n = newhead->n;
-	reversed->next = NULL;
-	while (newhead->next != NULL)
+	tmp = reversed;
+	tmp->next = NULL;
+	while (reversed->next)
 	{
-		newhead = newhead->next;
-		tmp = reversed;
-		reversed = (listint_t *) malloc(sizeof(listint_t));
-		if (reversed == NULL)
-			return (0);
-		reversed->n = newhead->n;
+		reversed = reversed->next;
 		reversed->next = tmp;
+		tmp = reversed;
 	}
-
-	newhead = *head;
-	while(reversed != NULL && newhead != NULL)
+	while (reversed && newhead)
 	{
 		if (reversed->n != newhead->n)
 			return (0);
