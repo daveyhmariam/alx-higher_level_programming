@@ -15,7 +15,7 @@ int is_palindrome(listint_t **head)
 		prev = reversed;
 		reversed = tmp;
 	}
-	reversed = tmp;
+	reversed = prev;
 	while (reversed && newhead)
 	{
 		if (reversed->n != newhead->n)
