@@ -2,19 +2,20 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *newhead, *reversed, *tmp;
+	listint_t *newhead, *reversed, *tmp, *prev;
 	if (*head == NULL || head == NULL)
 		return (1);
 	reversed = *head;
 	newhead = *head;
-	tmp = reversed;
-	tmp->next = NULL;
-	while (reversed->next)
+	prev = NULL;
+	while (reversed)
 	{
-		reversed = reversed->next;
-		reversed->next = tmp;
-		tmp = reversed;
+		tmp = reversed->next;
+		reversed->next = prev;
+		prev = reversed;
+		reversed = tmp;
 	}
+	reversed = tmp;
 	while (reversed && newhead)
 	{
 		if (reversed->n != newhead->n)
