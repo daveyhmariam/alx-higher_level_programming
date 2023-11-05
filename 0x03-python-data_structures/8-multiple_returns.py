@@ -9,5 +9,4 @@ def multiple_returns(sentence):
 
     Return: tuple
     """
-    if sentence:
-        return (tuple([len(sentence), sentence[0] if sentence else None]))
+    return (tuple([len(sentence), sentence[0] if sentence else None]))
