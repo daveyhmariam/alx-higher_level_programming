@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def multiply_by_2(a_dictionary):
     """
     Multiplies a dictionary values by 2
@@ -10,7 +11,7 @@ def multiply_by_2(a_dictionary):
     """
     keys = list(a_dictionary.keys())
     values = list(map(lambda x: x * 2, list(a_dictionary.values())))
-    a_dictionary.clear()
+    new_dictionary = {}
     for k, v in zip(keys, values):
-        a_dictionary[k] = v
-    return (a_dictionary)
+        new_dictionary[k] = v
+    return (new_dictionary)
