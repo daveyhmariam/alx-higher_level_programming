@@ -11,4 +11,3 @@ def print_sorted_dictionary(a_dictionary):
     key_list.sort()
     for k in key_list:
         print(f"{k}: {a_dictionary[k]}")
-
