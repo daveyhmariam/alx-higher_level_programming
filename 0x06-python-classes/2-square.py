@@ -4,6 +4,8 @@
 
 class Square():
     """ Square instance with input verification"""
+
+
     def __init__(self, size=0):
         """Initialize a new Square.
 
