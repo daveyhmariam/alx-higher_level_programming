@@ -2,6 +2,7 @@
 
 """ Class Square"""
 
+
 class Square:
     """ Defination of Square"""
     pass
