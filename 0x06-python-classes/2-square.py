@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""class square"""
 
 
 class Square():
-
+    """ Square instance with input verification"""
     def __init__(self, size=0):
         if size < 0:
             raise ValueError("size must be >= 0")
