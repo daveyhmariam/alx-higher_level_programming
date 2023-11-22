@@ -31,13 +31,13 @@ class Square():
         self.__size = value
 
     @property
-    def position(self)
+    def position(self):
         
         """getter method"""
         return self.__position
     
     @position.setter
-    def position(self, value)
+    def position(self, value):
         """position setter"""
     
         if (not isinstance(value, tuple) or
