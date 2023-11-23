@@ -33,14 +33,14 @@ class Square():
 
     @property
     def position(self):
-        
+
         """getter method"""
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """position setter"""
-    
+
         if (not isinstance(value, tuple) or
                 not all(isinstance(i, int) for i in value) or
                 len(tuple) != 2 or
@@ -51,6 +51,7 @@ class Square():
     def area(self):
         """ returns area of square"""
         return self.__size ** 2
+
     def my_print(self):
 
         """Print # in square area"""
