@@ -23,17 +23,19 @@ class Node:
 
     @data.setter
     def data(self, value):
+        """data property getter/setter"""
         if (not isinstance(value, int)):
             raise TypeError("data must be an integer")
         self.__data = value
 
     @property
     def next_node(self):
-        """next_node getter/setter"""
+        """next_node getter"""
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
+        """next_node setter"""
         if (value is not None and
                 not isinstance(value, Node)):
             raise TypeError("next_node must be a Node object")
@@ -41,7 +43,7 @@ class Node:
 
 
 class SinglyLinkedList:
-    """class to create linked list"""
+    """class to creat linked list"""
     def __init__(self):
         """instantiate instance attribute"""
 
