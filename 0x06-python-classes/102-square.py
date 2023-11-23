@@ -26,30 +26,30 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
+
     def __eq__(self, other):
-         """Define the == comparision to a Square."""
-         return self.area() == other.area()
+        """Define the == comparision to a Square."""
+        return self.area() == other.area()
 
     def __lt__(self, other):
-         """Define the < comparision to a Square."""
-         return self.area() < other.area()
+        """Define the < comparision to a Square."""
+        return self.area() < other.area()
 
     def __le__(self, other):
-         """Define the <= comparision to a Square."""
-         return self.area() <= other.area()
+        """Define the <= comparision to a Square."""
+        return self.area() <= other.area()
 
     def __ne__(self, other):
-         """Define the != comparision to a Square."""
-         return self.area() != other.area()
+        """Define the != comparision to a Square."""
+        return self.area() != other.area()
 
     def __gt__(self, other):
-         """Define the > comparision to a Square."""
-         return self.area() > other.area()
+        """Define the > comparision to a Square."""
+        return self.area() > other.area()
 
     def __ge__(self, other):
-         """Define the >= comparision to a Square."""
-         return self.area() >= other.area()
+        """Define the >= comparision to a Square."""
+        return self.area() >= other.area()
 
     def area(self):
         """ returns area of square"""
