@@ -24,8 +24,7 @@ class Node:
     @data.setter
     def data(self, value):
         """data property setter"""
-        if (value is None or
-                not isinstance(value, int)):
+        if (not isinstance(value, int)):
             raise TypeError("data must be an integer")
         self.__data = value
 
@@ -73,7 +72,7 @@ class SinglyLinkedList:
         else:
             tmp = self.__head
             while (tmp.next_node is not None and
-                   new.data > tmp.next_node.data):
+                   tmp.next_node.data < value):
                 tmp = tmp.next_node
             new.next_node = tmp.next_node
             tmp.next_node = new
