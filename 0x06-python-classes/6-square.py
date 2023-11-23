@@ -2,7 +2,7 @@
 """class square"""
 
 
-class Square():
+class Square:
 
     """ Square instance with input verification"""
     def __init__(self, size=0, position=(0, 0)):
@@ -43,8 +43,8 @@ class Square():
 
         if (not isinstance(value, tuple) or
                 not all(isinstance(i, int) for i in value) or
-                len(tuple) != 2 or
-                not all(i >= 0 for i in tuple)):
+                len(value) != 2 or
+                not all(i >= 0 for i in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -57,6 +57,8 @@ class Square():
         """Print # in square area"""
 
         for i in range(self.__size):
+            for k in range(self.__position[0]):
+                print(" ", end="")
             for j in range(self.__size):
                 print("#", end="")
             print("")
