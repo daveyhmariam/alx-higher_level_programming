@@ -59,12 +59,12 @@ class Rectangle:
         String representarion of the rectangle with #
         """
 
-        if self.__height == 0 or self.__width == 0:
-            return ""
-        else:
-            str_ = []
-            for r in range(self.__height):
-                for c in range(self.__width):
-                    str_.append("#")
-                str_.append("\n")
-            return "".join(str_)
+                if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        rect = []
+        for i in range(self.__height):
+            [rect.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
