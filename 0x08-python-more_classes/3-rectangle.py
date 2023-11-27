@@ -59,7 +59,7 @@ class Rectangle:
         String representarion of the rectangle with #
         """
 
-                if self.__width == 0 or self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ("")
 
         rect = []
