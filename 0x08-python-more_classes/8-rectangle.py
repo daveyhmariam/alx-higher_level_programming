@@ -85,7 +85,7 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-        
+
     def __repr__(self):
         rect = f"Rectangle({self.__width}, {self.__height})"
         return (rect)
