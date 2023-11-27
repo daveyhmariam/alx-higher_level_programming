@@ -67,4 +67,5 @@ class Rectangle:
             for k in range(self.__width):
                 [str_.append("#")]
             str_.append("\n")
+        str_.pop()
         return ("".join(str_))
