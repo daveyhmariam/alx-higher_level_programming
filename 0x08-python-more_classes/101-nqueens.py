@@ -64,6 +64,8 @@ def get_solution(brd):
 
 
 if __name__ == '__main__':
+    """Starting of execution of program
+    """
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         exit(1)
