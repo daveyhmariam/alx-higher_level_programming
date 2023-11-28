@@ -5,58 +5,81 @@ variable from the `sys` module,
 which allows the script to access
 command-line arguments.
 """
-from sys import argv
+import sys
 
 
-col = set()
-neg = set()
-pos = set()
-possible_solution = []
+def board(N):
+    """Creates new board
 
+    Args:
+        N (int): size of board
 
-def backtrack_solution(r, n):
+    Returns:
+        list of list
     """
-    The function `backtrack_solution` uses backtracking
-    to find all possible solutions to the N-Queens
-    problem.
-    """
+    return [[0 for col in range(N)] for row in range(N)]
 
-    if r == n:
+
+def solution(col=0):
+    """
+    Finds all solutions for N queen problem using backtracking
+
+    Args:
+        col (int): the column to be recursively calculated
+    """
+    global new_board
+    if col == N:
         return
-    for c in range(n):
-        if c in col or (r - c) in neg or (r + c) in pos:
+    for row in range(N):
+        if row in Q or (row+col) in Qu or (row-col) in Qd:
             continue
-        possible_solution.append([])
-        col.add(c)
-        neg.add(r - c)
-        pos.add(r + c)
-        possible_solution[-1].append(r)
-        possible_solution[-1].append(c)
-        if len(possible_solution) == n:
-            print(possible_solution)
-        backtrack_solution(r + 1, n)
-        col.remove(c)
-        neg.remove(r - c)
-        pos.remove(r + c)
-        possible_solution.pop(-1)
+        Q.add(row)
+        Qu.add(row+col)
+        Qd.add(row-col)
+        new_board[row][col] = 1
+        if col == (N-1):
+            get_solution(new_board)
+        solution(col+1)
+        new_board[row][col] = 0
+        Q.remove(row)
+        Qu.remove(row+col)
+        Qd.remove(row-col)
+    return
 
 
-"""
-The `if __name__ == '__main__':` block is used to ensure
-that the code inside it is only executedwhen the script
-is run directly, and not when it is imported as a module.
-"""
+def get_solution(brd):
+    """
+    Gets the indecies of the possible solutios from the board
+
+    Args:
+        brd (board): the board state on the possible solution
+    """
+    global sol
+    indx = []
+    for i in range(N):
+        for j in range(N):
+            if brd[i][j] == 1:
+                indx.append([i, j])
+    sol.append(indx)
 
 
 if __name__ == '__main__':
-    if len(argv) != 2:
+    """Starting of execution of program
+    """
+    if len(sys.argv) != 2:
         print("Usage: nqueens N")
         exit(1)
-    n = int(argv[1])
-    if type(n) is not int:
+    N = int(sys.argv[1])
+    if not isinstance(N, int):
         print("N must be a number")
         exit(1)
-    if n < 4:
+    if N < 4:
         print("N must be at least 4")
-        exit(1)
-    backtrack_solution(0, n)
+    new_board = board(N)
+    sol = []
+    Q = set()
+    Qu = set()
+    Qd = set()
+    solution(0)
+    for s in sol:
+        print(s)
