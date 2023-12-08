@@ -12,16 +12,18 @@ def matrix_divided(matrix, div):
         list: A new matrix resulting from the division.
 
     Raises:
-        TypeError: If the input matrix is not a valid list
-                    of lists of integers/floats
-                    or if the divisor is not a number.
+        TypeError: If the input matrix is not a valid list of lists of integers/floats
+                   or if the divisor is not a number.
         ZeroDivisionError: If attempting to divide by zero.
     """
     if any(type(row) != list for row in matrix):
         raise TypeError("matrix must be a matrix"
                         "(list of lists) of integers/floats")
     for row in matrix:
-        if any(not isinstance(el, (int, float)) for el in row) or matrix == []:
+        if any(not isinstance(el, (int, float)) for el in row):
+            raise TypeError("matrix must be a matrix"
+                            "(list of lists) of integers/floats")
+    if matrix == []:
             raise TypeError("matrix must be a matrix"
                             "(list of lists) of integers/floats")
     if not all(len(row) == len(matrix[0]) for row in matrix[1:]):
