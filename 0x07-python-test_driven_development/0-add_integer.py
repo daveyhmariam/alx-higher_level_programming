@@ -7,12 +7,10 @@ def add_integer(a, b=98):
     Args:
         a (int, float): integer argument
         b (int, float): integer argument
-
-    Returns: sum
-    
     Raises:
         TypeError: If either of a or b is a non-integer and non-float.
 
+    Returns: sum
     """
     if (not isinstance(a, int) and
             not isinstance(a, float)):
