@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """MyInt class that inherits from int"""
 
+
 class MyInt(int):
     """This class inherits from int and inverts the operators == and !="""
-    
+
     def __eq__(self, other):
         """invert the logical equal operator
 
