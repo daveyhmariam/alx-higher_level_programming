@@ -21,5 +21,5 @@ class Square(Rectangle):
     def __str__(self):
         """Readable string of object representation
         """
-        return ("[{}] {}"
-                .format(self.__class__.__name__, self.__size))
+        return ("[{}] {}/{}"
+                .format(self.__class__.__name__, self.__size, self.size))
