@@ -2,13 +2,14 @@
 """Rectagle class"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """This Rectangle class inherits from the base class
 
     Args:
         Base (class): superclass
     """
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """This magic method initializes the object with certain parameters
 
@@ -30,7 +31,7 @@ class Rectangle(Base):
         """getter/setter method for width
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if value < 0:
