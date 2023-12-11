@@ -85,7 +85,7 @@ class Rectangle(Base):
     def area(self):
         """Returns area of rectangle
         """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """Visual representation of the rectangle in stdout
@@ -98,6 +98,19 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end="")
             print()
+
+    def update(self, *args):
+        """Updates the attribute values with given array of attributes
+        Args:
+            args (list, tuple): argument field
+        """
+        fields = [self.id,
+                  self.width,
+                  self.height,
+                  self.x,
+                  self.y]
+        for i in range(len(args)):
+            fields[i] = args[i]
 
     def __str__(self):
         """string representation of instance object
