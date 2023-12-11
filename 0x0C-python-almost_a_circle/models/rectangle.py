@@ -99,4 +99,6 @@ class Rectangle(Base):
         """string representation of instance object
         """
         return ("[Rectangle] ({}) {}/{} - {}/{}"
-                "".format(self.id, self.__x, self.__y, self.__width, self.__height))
+                "".format(self.id, self.__x,
+                          self.__y, self.__width,
+                          self.__height))
