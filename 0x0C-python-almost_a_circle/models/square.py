@@ -46,7 +46,6 @@ class Square(Rectangle):
             for a, v in kwargs.items():
                 setattr(self, a, v)
 
-
     def __str__(self):
         """string representation of instance object
         """
