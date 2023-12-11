@@ -30,6 +30,23 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """Updates the attribute values with given array of attributes
+        Args:
+            args (list, tuple): argument field
+        """
+        fields = ['id',
+                  'size',
+                  'x',
+                  'y']
+        if args:
+            for i in range(len(args)):
+                setattr(self, fields[i], args[i])
+        else:
+            for a, v in kwargs.items():
+                setattr(self, a, v)
+
+
     def __str__(self):
         """string representation of instance object
         """
