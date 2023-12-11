@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Rectagle class"""
-
+from models.base import Base
 
 class Rectangle(Base):
     """This Rectangle class inherits from the base class
