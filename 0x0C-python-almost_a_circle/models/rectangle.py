@@ -99,7 +99,7 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates the attribute values with given array of attributes
         Args:
             args (list, tuple): argument field
@@ -109,8 +109,12 @@ class Rectangle(Base):
                   'height',
                   'x',
                   'y']
-        for i in range(len(args)):
-            setattr(self, fields[i], args[i])
+        if args:
+            for i in range(len(args)):
+                setattr(self, fields[i], args[i])
+        else:
+            for a, v in kwargs.items():
+                setattr(self, a, v)
 
     def __str__(self):
         """string representation of instance object
