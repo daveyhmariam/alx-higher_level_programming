@@ -104,13 +104,15 @@ class Rectangle(Base):
         Args:
             args (list, tuple): argument field
         """
-        fields = [self.id,
-                  self.width,
-                  self.height,
-                  self.x,
-                  self.y]
-        for i in range(len(args)):
-            fields[i] = args[i]
+        if args:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                pass
 
     def __str__(self):
         """string representation of instance object
