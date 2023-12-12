@@ -36,7 +36,7 @@ class Base:
         """writes jason representation to file
 
         Args:
-            list_objs (list): 
+            list_objs (list):
         """
         name = cls.__name__ + ".json"
         with open(name, 'w') as file:
