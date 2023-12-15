@@ -82,6 +82,6 @@ class Base:
                     return []
                 list_dict = cls.from_json_string(f.read())
                 return [cls.create(**o) for o in list_dict]
-                
+
         except IOError:
             return []
