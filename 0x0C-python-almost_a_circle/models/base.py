@@ -28,7 +28,7 @@ class Base:
             list_dictionaries (list): list of dictionaries
         """
         if not list_dictionaries or list_dictionaries == []:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
