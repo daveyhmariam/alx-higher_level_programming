@@ -22,13 +22,13 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Return the JSON serialization of a list of dicts.
+        """JSON string representation of list_dictionaries
 
         Args:
-            list_dictionaries (list): A list of dictionaries.
+            list_dictionaries (list): list of dictionaries
         """
-        if list_dictionaries is None or list_dictionaries == []:
-            return "[]"
+        if not list_dictionaries or list_dictionaries = []:
+            return []
         return json.dumps(list_dictionaries)
 
     @classmethod
