@@ -46,3 +46,5 @@ class Base:
                 string = [obj.to_dictionary() for obj in list_objs]
                 json_str = Base.to_json_string(string)
                 file.write(json_str)
+                
+my name
