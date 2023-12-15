@@ -69,4 +69,3 @@ class Base:
                 this = cls(1)
             this.update(**dictionary)
             return this
-        return None
