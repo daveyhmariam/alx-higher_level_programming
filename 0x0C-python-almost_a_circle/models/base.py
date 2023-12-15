@@ -57,6 +57,7 @@ class Base:
                 json_str = Base.to_json_string(string)
                 file.write(json_str)
 
+    @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set
         Args:
