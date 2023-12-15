@@ -56,3 +56,17 @@ class Base:
                 string = [obj.to_dictionary() for obj in list_objs]
                 json_str = Base.to_json_string(string)
                 file.write(json_str)
+
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set
+        Args:
+            **dictionary (dict): Key/value pairs of attributes to initialize.
+        """
+        if dictionary is not None or dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                this = cls(1, 1)
+            else:
+                this = cls(1)
+            this.update(**dictionary)
+            return this
+        return None
