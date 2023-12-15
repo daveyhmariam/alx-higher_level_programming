@@ -27,7 +27,7 @@ class Base:
         Args:
             list_dictionaries (list): list of dictionaries
         """
-        if not list_dictionaries or list_dictionaries = []:
+        if not list_dictionaries or list_dictionaries == []:
             return []
         return json.dumps(list_dictionaries)
 
