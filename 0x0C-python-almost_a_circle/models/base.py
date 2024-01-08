@@ -98,14 +98,16 @@ class Base:
         with open(filename, "w", newline="") as csvfile:
             if list_objs is None or list_objs == []:
                 csvfile.write("[]")
+                return
             else:
                 if cls.__name__ == "Rectangle":
-                    fieldnames = ["id", "width", "height", "x", "y"]
+                    fields = ["id", "width", "height", "x", "y"]
                 else:
-                    fieldnames = ["id", "size", "x", "y"]
-                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                for obj in list_objs:
-                    writer.writerow(obj.to_dictionary())
+                    fields = ["id", "size", "x", "y"]
+            writer = csv.DictWriter(csvfile, fieldnames=fields)
+            for o in list_objs:
+                writer.writerow(o.to_dictionary())
+
     @classmethod
     def load_from_file_csv(cls):
         """Return a list of classes instantiated from a CSV file.
