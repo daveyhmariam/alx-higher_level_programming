@@ -2,6 +2,7 @@
 """Base class for subsequent geometric classes"""
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -131,3 +132,46 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+    def draw(list_rectangles, list_squares):
+        """Draw obects with turtle graphics
+
+        Args:
+            list_rectangles (List): list of rectangle objects
+            list_squares (List): list of square objects
+        """
+        tur = turtle.Turtle()
+        tur.penup()
+        tur.goto(-100, 200)
+        tur.pendown
+        tur.color("", "cyan")
+        
+        for o in list_rectangles:
+            tur.begin_fill()
+            tur.forward(o.width)
+            tur.right(90)
+            tur.forward(o.height)
+            tur.right(90)
+            tur.forward(o.width)
+            tur.right(90)
+            tur.forward(o.height)
+            tur.end_fill()
+            tur.penup()
+            tur.backward(o.height + 10)
+            tur.setheading(0)
+            tur.pendown()
+        for o in list_squares:
+            tur.begin_fill()
+            tur.forward(o.size)
+            tur.right(90)
+            tur.forward(o.size)
+            tur.right(90)
+            tur.forward(o.size)
+            tur.right(90)
+            tur.forward(o.size)
+            tur.end_fill()
+            tur.penup()
+            tur.backward(o.size + 10)
+            tur.pendown()
+            tur.setheading(0)
+        turtle.done()
