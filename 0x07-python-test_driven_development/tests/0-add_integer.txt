@@ -21,7 +21,7 @@ How to use ``add_integer`` function
 5
 
 >>> add_integer(-2.8, -3.1)
--6
+-5
 
 >>> add_integer(-3)
 95
@@ -55,7 +55,7 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 TypeError: a must be an integer
 
->>> add_integer("4", c="9")
+>>> add_integer("4", b="9")
 Traceback (most recent call last):
 TypeError: a must be an integer
 
@@ -63,7 +63,7 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 TypeError: b must be an integer
 
->>> add_integer(4, c="9")
+>>> add_integer(4, b="9")
 Traceback (most recent call last):
 TypeError: b must be an integer
 
