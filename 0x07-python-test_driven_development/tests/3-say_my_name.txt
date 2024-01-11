@@ -1,24 +1,34 @@
-"""
-doctest for 3-say_my_name module
 
-Both strings passed
+
+usage 3-say_may_name
+
 >>> say_my_name = __import__("3-say_my_name").say_my_name
->>> say_my_name("dave", "yilma")
-My name is dave yilma
->>> say_my_name(6, "dave")
-Traceback (most recent call last):
-    ...
-TypeError: first_name must be a string
 
->>> say_my_name("dave", 8)
-Traceback (most recent call last):
-    ...
-TypeError: last_name must be a string
+case 1:
+
+>>> say_my_name("first", "last")
+My name is first last
+
+case 2:
 
 >>> say_my_name("", "")
 My name is  
 
+case 3:
+
 >>> say_my_name("  ", "  ")
 My name is      
 
-"""
+case 4:
+
+>>> say_my_name(12, "last")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+case 5:
+
+>>> say_my_name("first", 12)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
