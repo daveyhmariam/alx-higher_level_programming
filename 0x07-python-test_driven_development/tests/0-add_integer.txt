@@ -75,5 +75,7 @@ SyntaxError: positional argument follows keyword argument
 >>> add_integer(a=4, b=9)
 13
 
-
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
 """
