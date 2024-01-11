@@ -2,15 +2,15 @@
 doctest for 3-say_my_name module
 
 Both strings passed
->>> print_name = __import__('3-say_my_name').say_my_name
->>> print_name("dave", "yilma")
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+>>> say_my_name("dave", "yilma")
 My name is dave yilma
->>> print_name(6, "dave")
+>>> say_my_name(6, "dave")
 Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
 
->>> print_name("dave", 8)
+>>> say_my_name("dave", 8)
 Traceback (most recent call last):
     ...
 TypeError: last_name must be a string
@@ -19,6 +19,6 @@ TypeError: last_name must be a string
 My name is  
 
 >>> say_my_name("  ", "  ")
-My name is     
+My name is      
 
 """
