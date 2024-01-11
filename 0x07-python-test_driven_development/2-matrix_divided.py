@@ -17,6 +17,10 @@ def matrix_divided(matrix, div):
                    or if the divisor is not a number.
         ZeroDivisionError: If attempting to divide by zero.
     """
+    if type(matrix) is not list:
+        raise TypeError("matrix must be a matrix"
+                        "(list of lists) of integers/floats")
+    
     if any(type(row) != list for row in matrix):
         raise TypeError("matrix must be a matrix"
                         "(list of lists) of integers/floats")
