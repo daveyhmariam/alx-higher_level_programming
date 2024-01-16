@@ -1,6 +1,6 @@
 -- Create table and insert entries
 
-CREATE IF NOT EXISTS secod_table(   `id` INT
+CREATE IF NOT EXISTS second_table(   `id` INT
                                     `name` VARCHAR(256)
                                     `score` INT
                                 );
