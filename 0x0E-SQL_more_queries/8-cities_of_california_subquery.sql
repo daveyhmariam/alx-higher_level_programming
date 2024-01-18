@@ -2,7 +2,7 @@
 
 SELECT id
 FROM states
-WHERE name = 'California' S states_id;
+WHERE name = 'California' AS states_id;
 SELECT id, name FROM cities
 WHERE state_id = states_id
 GROUP BY id, name
