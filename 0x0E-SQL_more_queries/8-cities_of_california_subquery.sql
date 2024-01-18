@@ -2,8 +2,10 @@
 
 SELECT id
 FROM hbtn_0d_usa.states
-WHERE name = 'California' AS states_id;
+WHERE name = 'California'
 SELECT id, name FROM cities
-WHERE state_id = states_id
+WHERE state_id = 'SELECT id
+FROM hbtn_0d_usa.states
+WHERE name = 'California''
 GROUP BY id, name
 ORDER BY id ASC;
