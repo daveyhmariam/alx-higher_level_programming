@@ -26,3 +26,11 @@ class Student:
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
 
         return self.__dict__
+
+    def reload_from_json(self, json):
+        """set public instance attribute from dict
+
+        Args:
+            json (dictionary): key value pair of public instance attr
+        """
+        
