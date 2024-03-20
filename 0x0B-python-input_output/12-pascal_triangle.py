@@ -2,6 +2,7 @@
 """pascal triangle
 """
 
+
 def pascal_triangle(n):
     """ Pascal tringle using binomial theorem
 
@@ -13,9 +14,11 @@ def pascal_triangle(n):
         return []
     pascal = []
     for i in range(n):
-        pascal.append([int(fact(i) / fact(i -l) / fact(l)) for l in range(i + 1)])
+        pascal.append([int(fact(i) / fact(i - l) /\
+                        fact(l)) for l in range(i + 1)])
     return pascal
-            
+
+
 def fact(i):
     if (i <= 0):
         return (1)
