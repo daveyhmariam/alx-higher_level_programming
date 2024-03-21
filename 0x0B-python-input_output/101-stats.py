@@ -30,9 +30,9 @@ if __name__ == "__main__":
     try:
         for line in sys.stdin:
 
-            if count == 9:
+            if count == 10:
                 print_stat(file_size, stat)
-                count = 0
+                count = 1
             else:
                 count += 1
             line = line.split()
