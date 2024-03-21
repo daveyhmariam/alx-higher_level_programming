@@ -13,9 +13,12 @@ def pascal_triangle(n):
     if (n <= 0):
         return []
     pascal = []
+    i = 0
     for i in range(n):
-        pascal.append([int(fact(i) / fact(i - l) /
-                           fact(l)) for l in range(i + 1)])
+        new = []
+        for ln in range(0, i + 1):
+            new.append(int(fact(i) / fact(i - ln) / fact(ln)))
+        pascal.append(new)
     return pascal
 
 
