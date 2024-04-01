@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """script that lists all states from the database hbtn_0e_0_usa"""
-import MYSQLdb
+import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    con = MYSQLdb.connect(host="localhost",
+    con = MySQLdb.connect(host="localhost",
                           user=sys.argv[1],
                           passwd = sys.argv[2],
                           db = sys.argv[3], port = 3306)
@@ -14,4 +14,4 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
     cur.close()
-    con.clos()
+    con.close()
