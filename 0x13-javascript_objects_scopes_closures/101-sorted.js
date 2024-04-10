@@ -11,5 +11,4 @@ for (const key of Object.keys(dict)) {
   newdict[val].push(key);
 }
 
-console.log(dict);
 console.log(newdict);
