@@ -12,7 +12,8 @@ if __name__ == "__main__":
                                  passwd=sys.argv[2],
                                  db=sys.argv[3])
     cur = connection.cursor()
-    cur.execute("""SELECT * FROM states WHERE name LIKE BINARY  '{}'""".format(sys.argv[4]))
+    cur.execute("""SELECT * FROM states WHERE
+                name LIKE BINARY  '{}'""".format(sys.argv[4]))
     result = cur.fetchall()
     for r in result:
         print(r)
