@@ -21,4 +21,4 @@ if __name__ == "__main__":
     if result:
         print(result.id, result.name, sep=": ")
     else:
-        print("No second state found.")
+        print("Nothing")
