@@ -21,6 +21,8 @@ if __name__ == "__main__":
 
     session = Session()
 
-    result = session.query(City, State.name).order_by(City.id)
-    for city, state_name in result:
-        print(f"{city.id}: {city.name} -> {state_name}")
+    result = session.query(State).order_by(State.id)
+
+    for res in result:
+        for city in res.cities:
+            print(f"{city.id}: {city.name} -> {res.name}")
