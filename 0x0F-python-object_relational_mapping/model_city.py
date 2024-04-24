@@ -3,7 +3,7 @@
 ORM definition of the cities table
 """
 from model_state import Base
-from sqlalchemy import Column, String, MetaData, Integer, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
 
