@@ -7,17 +7,15 @@ with the letter as a parameter.
 import sys
 import requests
 
-
 if __name__ == "__main__":
-    letter = "" if len(sys.argv) == 1 else sys.argv[1]
-    payload = {"q": letter}
-
-    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
+    payload = "" if len(sys.argv) == 1 else {"q": sys.argv[1]}
+    url = "http://0.0.0.0:5000/search_user"
+    res = requests.post(url, data=payload)
     try:
-        response = r.json()
-        if response == {}:
+        if res.json() == {}:
             print("No result")
         else:
-            print("[{}] {}".format(response.get("id"), response.get("name")))
+            print("[{}] {}".format(res.json().get("id"),
+                                   res.json().get("name")))
     except ValueError:
         print("Not a valid JSON")
